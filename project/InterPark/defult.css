@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Pretendard-Regular';
+
+}
+.en {
+    font-family: 'Poppins', sans-serif;
+}
+.row {
+    display: flex;
+}
+.inner {
+    width: 1280px;
+    margin: 0 auto;
+    /* border: 1px solid pink; */
+}
+
+
+.shopping h2,
+.tour h2,
+.ticket h2,
+.book h2,
+.benefits h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+}
+.shopping h3,
+.tour h3,
+.ticket h3,
+.book h3,
+.benefits h3 {
+    margin-top: 2px;
+    margin-bottom: 30px;
+    color: hsla(0,0%,7%,.5);
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+}
+
+
+
+/* ------------------디스플레이 논/블락--------------------*/
+.hide {
+    display: none !important;
+}
+.visible {
+    display: block;
+}
+
+
+
+/* 
+word-spacing 0px
+
+letter-spacing : nomal
+word-spacing : 0px
+
+line-height : 22px (글자에 따라 바뀜)
+columns : 다단
+column-count : auto 문단의 최대 개수
+column-width : auto 하나의 문단의 최소 가로 크기
+column-gap : normal 문단사이의 간격
+columns : 문단 최대개수 / 문잔의 최소 크기 각각 따로 함께 사용가능
+*/

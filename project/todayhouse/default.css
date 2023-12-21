@@ -1,0 +1,62 @@
+/* 웹폰트 로딩 & 적용*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #424242;
+    letter-spacing: -0.4px;
+}
+.en, .rate, .price {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+/* 초기화 reset */
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+a {
+    color: #424242;
+}
+
+/* 자주쓰는 색상 */
+:root {
+    --main: #35C5F0;
+    --point: #FF7777;
+}
+/* 자주 쓰는 클래스, 태그 */
+.inner {
+    width: 1136px;
+    margin: 0 auto;
+    /* border: 1px solid pink; */
+}
+.row {
+    display: flex;
+}
+h1 {
+    font-size: 20px;
+    color: #000;
+}
+h2 {
+    font-size: 15px;
+    color: var(--main);
+}
+span.badge {
+    width: 57px;
+    height: 22px;
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    background: var(--point);
+    color: #fff;
+    text-align: center;
+    line-height: 22px;
+    border-radius: 5px;
+}
+.on, 
+.rate,
+h2 {
+    color: var(--main);
+}

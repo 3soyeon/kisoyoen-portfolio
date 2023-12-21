@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #222;
+}
+:root {
+    --point: #ff581e;
+}
+h4 {
+    color: var(--point);
+}
+.en,
+nav, 
+.contact,
+h1, h2, h4 {
+    font-family: 'Montserrat', sans-serif;
+}
+/* //////////////////// 인트로 */
+section.intro {
+    display: flex;
+    flex-wrap: wrap;
+}
+.image-container {
+    width: 50%;
+    position: static;
+    border: 5px solid blue;
+}
+.sticky {
+    width: 50%;
+    position: sticky;
+    align-self: flex-start;
+    border: 5px solid red;
+}
+.sticky h4 {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.sticky h2 {
+    font-size: 41px;
+    margin-bottom: 44px;
+}
+.sticky p {
+    font-size: 17px;
+    line-height: 170%;
+    font-weight: 300;
+    margin-bottom: 70px;
+}
+.image-container img {
+    display: block;
+}
+.img01 {
+    width: 150px;
+    left: 0;
+    top: 0;
+}
+.img02 {
+    width: 150px;
+    top: 446px;
+    right: 14.74%;
+}
+.img03 {
+    width: 150px;
+    top: 1022px;
+    left: 0;
+}
+.img04 {
+    width: 150px;
+    top: 1281px;
+    left: 28.18%;
+}
+.img05 {
+    width: 150px;
+    top: 1673px;
+    left: 0;
+}
+
+.circle {
+    width: 23.802vw;
+    height: 182px;
+    position: relative;
+    margin-bottom: 82px;
+}
+.circle div {
+    width: 38.3%;
+    aspect-ratio: 1/1;
+    position: absolute;
+}
+.c1 {
+    background: url('images/intro/o1.png') no-repeat center / cover;
+    left: 0;
+}
+.c2 {
+    background: url('images/intro/o2.png') no-repeat center / cover;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.c3 {
+    background: url('images/intro/o3.png') no-repeat center / cover;
+    right: 0;
+}
+a.explore {
+    width: 233px;
+    height: 42px;
+    display: block;
+    color: var(--point);
+    font-size: 17px;
+    background: url('images/intro/Link.svg') no-repeat left bottom;
+}

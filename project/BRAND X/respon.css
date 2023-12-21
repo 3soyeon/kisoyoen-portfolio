@@ -1,0 +1,200 @@
+/* mini PC 1400px 이하 */
+@media screen and ( max-width: 1400px ) {
+    section.information ul {
+        margin: 0 auto;
+        min-width: unset;
+    }
+}
+/* Tab-big 1080px 이하 */
+@media screen and ( max-width: 1080px ) {
+    header {
+        width: 100px;
+    }
+    header .navigation {
+        width: 100px;
+    }
+    section.intro a.explore {
+        display: none;
+    }
+    section.intro .circle {
+        height: auto;
+    }
+    main {
+        width: calc(100% - 100px);
+        margin-left: 100px;
+    }
+}
+/* Tab 1000px 이하 */
+@media screen and ( max-width: 1000px ) {
+    .sticky {
+        position: static;
+        width: 100%;
+        margin-left: 0;
+    }
+    .image-container {
+        width: 100%;
+        position: static;
+        height: auto;
+    }
+    .image-container img {
+        position: static;
+    }
+    .circle {
+        width: 100%;
+        aspect-ratio: 2.5/1;
+        border: 1px solid red;
+    }
+    section.intro {
+        margin-top: 130px;
+        margin-bottom: 200px;
+        height: auto;
+    }
+    section.information ul {
+        width: 100%;
+        flex-direction: column;
+    }
+    section.information ul li {
+        width: 100%;
+    }
+    .information div {
+        aspect-ratio: 506/383;
+    }
+    .information strong {
+        margin: 20px 0;
+    }
+    .information p {
+        height: auto;
+        margin-bottom: 50px;
+    }
+    .information li:not(:last-child) {
+        margin-bottom: 80px;
+    }
+    .brand {
+        width: 100%;
+    }
+    footer > .row {
+        flex-direction: column;
+    }
+}
+@media screen and ( max-width: 768px ) {
+    .contact {
+        display: none;
+    }
+    main {
+        width: 100%;
+        margin-left: 0;
+    }
+    video {
+        display: none;
+    }
+    p.slogan {
+        font-size: 34px;
+        left: 5%;
+        transform: translateY(80px);
+    }
+    section.main-visual div.tab-pager {
+        left: 5%;
+        top: 81%;
+        margin-top: 0;
+    }
+    .visual-tab {
+        font-size: 14px;
+    }
+    section.intro {
+        width: 100%;
+        margin: 0;
+        padding: 100px 15px 66px;
+    }
+    .sticky h2 {
+        font-size: 35px;
+        font-weight: 600;
+    }
+    .image-container img {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .information ul {
+        padding: 0;
+    }
+    .information ul li {
+        padding: 0;
+    }
+    section.information {
+        padding-left: 40px;
+        margin-bottom: 150px;
+    }
+    .xexy {
+        background: url('https://xexymix.jpg3.kr/xexymix/main/xexymix_m2.jpg') no-repeat center / cover;
+    }
+    .whia {
+        background: url('https://brandxcorp.com/web/upload/images/m_brandlist_02.jpg') no-repeat center / cover;
+    }
+    .pocket {
+        background: url('https://brandxcorp.com/web/upload/images/m_brandlist_05.jpg') no-repeat center / cover;
+    }
+    .kookmin {
+        background: url('https://brandxcorp.com/web/upload/images/m_brandlist_06.jpg') no-repeat center / cover;
+    }
+    .pt {
+        background: url('https://brandxcorp.com/web/upload/images/m_brandlist_07.jpg') no-repeat center / cover;
+    }
+    /* PC일때는 안보이는 브랜드 */
+    .gelato-factory {
+        display: block;
+        background: url('https://brandxcorp.com/web/upload/images/m_brandlist_08.jpg') no-repeat center / cover;
+    }
+    .mix2mix {
+        display: block;
+        background: url('https://brandxcorp.com/web/upload/images/m_brandlist_03.jpg') no-repeat center / cover;
+    }
+    .dr {
+        display: block;
+        background: url('https://brandxcorp.com/web/upload/images/m_brandlist_04.jpg') no-repeat center / cover;
+    }
+    .brand {
+        height: 246px;
+    }
+    .brand img,
+    .brand span,
+    .brand .mask {
+        display: none;
+    }
+    section.brand-container {
+        margin-bottom: 120px;
+    }
+    footer .row {
+        flex-direction: column;
+        text-align: center;
+    }
+    footer {
+        padding: 100px 0;
+    }
+    
+    /*nav 사라짐 */
+    nav {
+        display: none;
+    }
+}
+
+
+
+
+/* 모바일(768px)보다 클 때만 hover 적용 */
+@media screen and ( min-width: 768px ) {
+    .brand:hover .mask {
+        opacity: 1;
+    }
+    .brand:hover span::before {
+        background: #fff;
+        left: -120px;
+    }
+    .brand:hover .mask img {
+        bottom: 145px;
+    }
+    .brand:hover .mask p {
+        bottom: 70px;
+    }
+    .brand:hover .mask a {
+        bottom: 30px;
+    }
+}

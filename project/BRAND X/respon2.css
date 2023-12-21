@@ -1,0 +1,19 @@
+@media screen and (max-width: 1400px) {
+
+    section.intro {
+        width: 100%;
+        position: static;
+    }
+    .sticky {
+        width: 100%;
+        position: static;
+        margin: 0;
+    }
+    .image-container {
+        width: 100%;
+        position: static;
+    }
+    .image-container img {
+        position: static;
+    }
+}

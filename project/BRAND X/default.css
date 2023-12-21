@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@font-face {
+    font-family: 'Pretendard-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    height: 5555px;
+    letter-spacing: -0.4px;
+}
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+.row {
+    display: flex;
+}
+.inner {
+    width: 1410px;
+    margin: 0 auto;
+    /* border: 1px solid pink; */
+}
+h1, h2, h3, h5 {
+    color: #1d1d1b;
+}
+h1 {
+    font-size: 32px;
+}
+h2 {
+    font-size: 20px;
+}
+h3 {
+    font-size: 20px;
+    font-weight: 400;
+}
+h4 {
+    font-size: 16px;
+    color: #888;
+    font-weight: 400;
+}
+h5 {
+    font-size: 15px;
+    font-weight: 400;
+}
+h5::before {
+    content: '★';
+    color: #555;
+}
+span.rate {
+    font-size: 26px;
+    color: #d3233a;
+    font-weight: 700;
+}
+span.set {
+    font-size: 26px;
+    color: #1d1d1b;
+    font-weight: 700;
+}
+span.set::after {
+    content: '원';
+    font-size: 18px;
+    position: relative;
+    top: -2px;
+}
+span.cost {
+    font-size: 15px;
+    color: #ccc;
+    text-decoration: line-through;
+    position: relative;
+    top: -3px;
+}
+div.price {
+    font-family: 'Pretendard-Bold';
+}
+/* '실온' 뱃지 */
+.base {
+    display: inline-block;
+    padding: 0 6px;
+    font-size: 13px;
+    color: #d3233a;
+    border: 1px solid #f2afaf;
+    border-radius: 4px;
+}
+.cold {
+    display: inline-block;
+    padding: 0 6px;
+    font-size: 13px;
+    color: #0a309e;
+    border: 1px solid #afc8f2;
+    border-radius: 4px;
+}
+/* new, best, 무료배송, 추천 아이콘 */
+span.new {
+    width: 34px;
+    height: 20px;
+    display: inline-block;
+    background: url('images/product-icons/new.png') no-repeat center;
+    margin-bottom: -4px;
+}
+span.best {
+    width: 36px;
+    height: 20px;
+    display: inline-block;
+    background: url('images/product-icons/best.png') no-repeat center;
+    margin-bottom: -4px;
+}
+span.free {
+    width: 46px;
+    height: 20px;
+    display: inline-block;
+    background: url('images/product-icons/무배.png') no-repeat center;
+    margin-bottom: -4px;
+}
+span.recom {
+    width: 36px;
+    height: 20px;
+    display: inline-block;
+    background: url('images/product-icons/추천.png') no-repeat center;
+    margin-bottom: -4px;
+}
+div.icons {
+    margin-top: 20px;
+}
+div.price, 
+h4,
+div.info {
+    margin-top: 7px;
+}
+h1.more::after {
+    content: '더보기';
+}
+.title.row {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 27px;
+}
+.more img {
+    margin-bottom: -4px;
+}
+div.info p {
+    color: #1d1d1b;
+}
+/* 썸네일 이미지 사이즈 조정 */
+.new-item li img {
+    /* 자식(img)의 너비가 li와 같게 */
+    width: 100%;
+}
+/* 썸네일 호버 효과 */
+.th {
+    overflow: hidden;
+    position: relative;
+}
+.th img {
+    transition: transform 1s;
+}
+.th:hover img {
+    transform: scale(1.5);
+}
+.th::after {
+    content: url('images/icons/icon_cart.svg');
+    position: absolute;
+    right: 20px;
+    bottom: 16px;
+}
+/* 이전 다음 아이콘 */
+a.prev-btn,
+a.next-btn {
+    width: 48px;
+    height: 48px;
+    display: block;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px 0 rgba(136, 136, 136, .1);
+    text-indent: -9999px;
+}
+a.prev-btn {
+    background: #fff url('images/icons/icon_arrow_left_16.svg') no-repeat center;
+}
+a.next-btn {
+    background: #fff url('images/icons/icon_arrow_right_16.svg') no-repeat center;
+}
+a.prev-btn:hover,
+a.next-btn:hover {
+    box-shadow: 0 5px 15px 0 rgba(136, 136, 136, .5);
+}

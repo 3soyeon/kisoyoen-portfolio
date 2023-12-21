@@ -1,0 +1,806 @@
+@import url(default.css);
+
+/* 헤더 */
+header {
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+}
+header .top,
+nav {
+    border-bottom: 1px solid #EAEDEF;
+}
+.top .row {
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+}
+header h1 a {
+    width: 73px;
+    height: 29px;
+    display: block;
+    background: url('images/header/logo.svg') no-repeat center / contain;
+    text-indent: -9999px;
+    margin-right: 39px;
+}
+header h1 {
+    margin-bottom: 0;
+}
+
+/* 커뮤니티 쇼핑 이사 메뉴 */
+.cateMenu {
+    margin: 0 78px 0 15px;
+}
+.cateMenu li {
+    padding: 0 13px;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+/* search 인풋 */
+.top div.search {
+    width: 286px;
+    height: 40px;
+    border: 1px solid #EAEDEF;
+    padding: 8px 20px 8px 15px;
+    border-radius: 4px;
+}
+input[type="text"] {
+    width: 221px;
+    height: 23px;
+    margin-left: 6px;
+    border: none;
+}
+input[type="text"]:focus {
+    outline: none;
+}
+input[type="text"]::placeholder {
+    font-family: inherit;
+    color: #C2C8CC;
+    font-size: 16px;
+}
+.cart {
+    width: 24px;
+    height: 24px;
+    margin-left: 21px;
+    margin-right: 15px;
+}
+ul.subMenu a {
+    font-size: 13px;
+    color: #2F3438;
+    padding: 0 13px;
+}
+ul.subMenu li:not(:last-child) {
+    border-right: 1px solid #F5F6F8;
+}
+button.write {
+    width: 95px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 700;
+    color:#fff;
+    background: var(--main);
+    border: none;
+    font-family: inherit;
+    border-radius: 4px;
+    margin-left: 7px;
+    cursor: pointer;
+}
+button img {
+    margin: 0 0 -4px 4px;
+}
+nav a {
+    font-size: 15px;
+    font-weight: 500;
+    display: block;
+    padding: 15px 10px;
+    color: #2F3438;
+}
+nav a.on {
+    border-bottom: 2px solid var(--main);
+}
+
+
+/* 메인 */
+main {
+    margin-top: 135px;
+}
+section.sec1 {
+    justify-content: space-between;
+    position: relative;
+}
+
+
+/* 메인 비쥬얼*/
+.mainVisual .row {
+    width: 847px;
+    height: 508px;
+    background: url('images/main/mainv.jpg') no-repeat center / 100%;
+    transition: background-size 1s ease;
+    position: relative;
+}
+/* mainVisual에 마우스를 올리면 row의 
+background-size가 '스윽' 커진다. */
+
+.mainVisual:hover .row {
+    background-size: 120%;
+}
+.mainVisual:hover a.more {
+    background: var(--main);
+    border: none;
+}
+.mainVisual p {
+    font-size: 34px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 8.5px;
+}
+span.userImg {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: inline-block;
+    background: url('images/main/user.jpg') no-repeat center / cover;
+    vertical-align: middle;
+}
+span.userName {
+    font-size: 15px;
+    color: #fff;
+    font-weight: 500;
+}
+a.more {
+    width: 140px;
+    height: 50px;
+    display: block;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    text-align: center;
+    line-height: 50px;
+    font-size: 15px;
+    font-weight: 700;
+    color:#fff;
+    position: absolute;
+    right: 30px;
+    bottom: 66px;
+    transition: all 1s;
+}
+.mainVisual .row > div {
+    position: absolute;
+    left: 30px;
+    bottom: 35px;
+}
+
+/* 메인 배너 */
+.mainBanner {
+    width: 269px;
+    height: 508px;
+    overflow: hidden;
+}
+.mainBanner img {
+    width: 100%;
+    transition: transform 1s;
+}
+.mainBanner:hover img {
+    transform: scale(1.2);
+}
+.mainBanner span {
+    position: absolute;
+    z-index: 99;
+    right: 10px;
+    bottom: 10px;
+    display: block;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 700;
+    color:#fff;
+    background: rgba(0,0,0, .3);
+    border-radius: 15px;
+}
+.prev, .next {
+    width: 40px;
+    height: 40px;
+    display: block;
+    background: #fff url('images/ui/arrow/next.svg') no-repeat center / contain;
+    position: absolute;
+    z-index: 99;
+    border-radius: 50%;
+    box-shadow: 4px 4px 4px 0 rgba(0,0,0, .15);
+}
+.prev {
+    top: 50%;
+    right: 250px;
+    transform: scaleX(-1) translateY(-50%);
+}
+.next {
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%);
+}
+
+/* 아이콘 네비게이션 (카테고리) */
+ul.iconCate {
+    justify-content: space-between;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 30px auto 60px;
+}
+ul.iconCate li {
+    width: 88px;
+}
+ul.iconCate li img {
+    width: 100%;
+    margin-bottom: 4px;
+}
+
+
+/* 오늘의 스토리 */
+ul.bestStory li {
+    width: 270px;
+    margin-right: 18px;
+}
+ul.bestStory div[class*=th] {
+    width: 270px;
+    height: 180px;
+    border-radius: 5px;
+}
+.story-th1 {
+    background: url('images/story/th1.webp') no-repeat center / cover;
+}
+.story-th2 {
+    background: url('images/story/th2.webp') no-repeat center / cover;
+}
+.story-th3 {
+    background: url('images/story/th3.webp') no-repeat center / cover;
+}
+section.story .userImg {
+    background: url('images/story/no_img.png') no-repeat center / cover ;
+}
+section.story .userName {
+    font-size: 13px;
+    color: #424242;
+}
+ul.bestStory p {
+    font-size: 15px;
+    margin: 10px 0;
+    font-weight: 500;
+}
+span.arrow {
+    width: 8px;
+    height: 8px;
+    display: block;
+    /* background: #aaa; */
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    transform: rotate(45deg);
+}
+.storyMore li {
+    width: 270px;
+    height: 102px;
+    padding: 30px;
+    background: #f9f9f9;
+    justify-content: space-between;
+    align-items: center;
+}
+section.story {
+    margin-bottom: 50px;
+}
+
+
+/* 카테고리별 상품찾기 productCate */
+.productCate {
+    margin-bottom: 60px;
+}
+.productCate ul {
+    justify-content: space-between;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+}
+.productCate li {
+    width: 80px;
+}
+.productCate img {
+    width: 100%;
+}
+
+
+/* 오늘의 딜*/
+section.deal {
+    margin-bottom: 100px;
+}
+.deal div.row {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.deal div[class*="th"] {
+    width: 269px;
+    height: 269px;
+    border-radius: 5px;
+    position: relative;
+}
+.deal-th1 {
+    background: url('images/deal/th1.webp') no-repeat center / cover;
+}
+.deal-th2 {
+    background: url('images/deal/th2.jpg') no-repeat center / cover;
+}
+.deal-th3 {
+    background: url('images/deal/th3.webp') no-repeat center / cover;
+}
+.deal-th4 {
+    background: url('images/deal/th4.webp') no-repeat center / cover;
+}
+span.badge {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+.deal img[src*="bookmark"] {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+.deal li {
+    width: 269px;
+}
+.deal ul.row {
+    justify-content: space-between;
+}
+.deal p {
+    font-weight: 500;
+}
+.deal p.brand {
+    font-size: 10px;
+    color: #828C94;
+    margin: 6px 0 3px;
+}
+.deal p.productName {
+    font-size: 15px;
+    margin-bottom: 7px;
+}
+.deal .en {
+    font-weight: 700;
+}
+.deal p.priceInfo {
+    margin-bottom: 7px;
+}
+.deal span.price {
+    font-size: 17px;
+}
+.deal p.review {
+    font-size: 12px;
+}
+.deal span.review {
+    color: #9E9E9E;
+}
+.deal span.score::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    background: url('images/ui/star.svg') no-repeat center / cover;
+}
+span.freeShipping {
+    width: 53px;
+    height: 21px;
+    display: block;
+    background: #ededed;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #757575;
+    text-align: center;
+    line-height: 21px;
+    margin-top: 7px;
+}
+
+
+/* 오늘의 인기사진 bestUser */
+section.bestUser {
+    margin-bottom: 80px;
+}
+.bestUser div.row {
+    justify-content: space-between;
+    align-items: center;
+}
+.bestUser ul.row {
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.bestUser ul.row li {
+    width: 269px;
+    height: 269px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.bestUser ul a:nth-of-type(1) li {
+    background: url('images/bestimg/th1.webp') no-repeat center / cover;
+}
+.bestUser ul a:nth-of-type(2) li {
+    background: url('images/bestimg/th2.webp') no-repeat center / cover;
+}
+.bestUser ul a:nth-of-type(3) li {
+    background: url('images/bestimg/th3.webp') no-repeat center / cover;
+}
+.bestUser ul a:nth-of-type(4) li {
+    background: url('images/bestimg/th4.webp') no-repeat center / cover;
+}
+.bestUser ul a:nth-of-type(5) li {
+    background: url('images/bestimg/th5.webp') no-repeat center / cover;
+}
+.bestUser ul a:nth-of-type(6) li {
+    background: url('images/bestimg/th6.webp') no-repeat center / cover;
+}
+.bestUser ul a:nth-of-type(7) li {
+    background: url('images/bestimg/th7.webp') no-repeat center / cover;
+}
+.bestUser ul a:nth-of-type(8) li {
+    background: url('images/bestimg/th8.webp') no-repeat center / cover;
+}
+.bestUser img[src*="layer"] {
+    width: 14px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.bestUser span.userImg{
+    background: none;
+    border: 1px solid #fff;
+    overflow: hidden;
+}
+.bestUser span.userImg img {
+    width: 100%;
+}
+.bestUser .user {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+}
+.bestUser span.userName {
+    font-size: 13px;
+}
+.rank {
+    width: 25px;
+    height: 32px;
+    background: url('images/ui/bookmark_rank.svg') no-repeat center / cover;
+    text-align: center;
+    padding-top: 3px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+    position: absolute;
+    top: 0;
+    left: 15px;
+}
+
+
+/* 유저들의 인테리어 시공 리뷰 */
+section.remodeling {
+    margin-bottom: 100px;
+}
+.remodeling .row {
+    justify-content: space-between;
+}
+.remodeling div.row {
+    margin-bottom: 20px;
+}
+.remodeling ul li {
+    width: 365px;
+}
+.remodeling ul li div[class*=th] {
+    width: 365px;
+    height: 243px;
+    border-radius: 5px;
+}
+.remodeling-th1 {
+    background: url('images/interior_review/th1.webp') no-repeat center / cover;
+}
+.remodeling-th2 {
+    background: url('images/interior_review/th2.webp') no-repeat center / cover;
+}
+.remodeling-th3 {
+    background: url('images/interior_review/th3.webp') no-repeat center / cover;
+}
+.starScore {
+    display: flex;
+    margin: 20px 0 10px;
+}
+.starScore img {
+    width: 12px;
+}
+.remodeling p {
+    margin-bottom: 20px;
+}
+.remodeling ul a:nth-of-type(1) .userImg {
+    background: url('images/interior_review/brand/1.webp') no-repeat center / cover;
+}
+.remodeling ul a:nth-of-type(2) .userImg {
+    background: url('images/interior_review/brand/2.webp') no-repeat center / cover;
+}
+.remodeling ul a:nth-of-type(3) .userImg {
+    background: url('images/interior_review/brand/3.webp') no-repeat center / cover;
+}
+.remodeling .userName {
+    font-size: 15px;
+    font-weight: 700;
+    color: #2F3438;
+}
+
+/* 오늘의 기획전 */
+section.sale {
+    margin-bottom: 100px;
+}
+.sale div.row {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.sale ul {
+    justify-content: space-between;
+}
+.sale ul li {
+    width: 365px;
+}
+.sale ul li div[class*="th"]{
+    width: 100%;
+    height: 243px;
+    margin-bottom: 20px;
+}
+.sale-th1 {
+    background: url('images/sale/th1.webp') no-repeat center / cover;
+}
+.sale-th2 {
+    background: url('images/sale/th2.webp') no-repeat center / cover;
+}
+.sale-th3 {
+    background: url('images/sale/th3.webp') no-repeat center / cover;
+}
+.sale p {
+    font-size: 14px;
+}
+.sale h4 {
+    font-size: 16px;
+}
+
+/* 해외 프리미엄 인기상품 모아보기 */
+section.premium {
+    margin-bottom: 100px;
+}
+.premium div.row {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.premium ul {
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.premium ul li {
+    width: 170px;
+}
+.premium ul div[class*=th] {
+    width: 170px;
+    height: 190px;
+}
+.premium-th1 {
+    background: url('images/premium/th1.webp') no-repeat center / cover;
+}
+.premium-th2 {
+    background: url('images/premium/th2.webp') no-repeat center / cover;
+}
+.premium-th3 {
+    background: url('images/premium/th3.webp') no-repeat center / cover;
+}
+.premium-th4 {
+    background: url('images/premium/th4.webp') no-repeat center / cover;
+}
+.premium-th5 {
+    background: url('images/premium/th5.webp') no-repeat center / cover;
+}
+.premium-th6 {
+    background: url('images/premium/th6.webp') no-repeat center / cover;
+}
+.premium ul li p {
+    height: 40px;
+    font-size: 14px;
+    margin: 20px 0 5px;
+    overflow: hidden;
+}
+.premium span.price {
+    font-size: 17px;
+}
+
+
+/* 베스트 */
+ul.chips.row {
+    width: 100%;
+    overflow-x: scroll;
+    margin: 20px 0;
+}
+ul.chips.row a {
+    display: block;
+    padding: 6px 12px;
+    background: #f7f9fa;
+    border-radius: 16px;
+    font-size: 13px;
+    color: #2F3438;
+    margin-right: 6px;
+    white-space: nowrap;
+}
+.best ul.bestitems {
+    justify-content: space-between;
+}
+.best ul.bestitems li {
+    width: 270px;
+}
+.best ul.bestitems div[class*="th"] {
+    width: 270px;
+    height: 270px;
+    position: relative;
+}
+div[class^='best-th'] + p {
+    font-size: 13px;
+    margin: 15px 0;
+}
+.best-th1 {
+    background: url('images/bestitem/th1.gif') no-repeat center / cover;
+}
+.best-th2 {
+    background: url('images/bestitem/th2.webp') no-repeat center / cover;
+}
+.best-th3 {
+    background: url('images/bestitem/th3.webp') no-repeat center / cover;
+}
+.best-th-more {
+    background: #FAFAFA;
+}
+.best .best-th-more > div {
+    width: 160px;
+    height: 83px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* border: 1px solid #000; */
+    font-size: 21px;
+    font-weight: 700;
+}
+.best-th-more .next {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* 반반 배너 */
+section.halfBanner {
+    margin: 50px auto;
+}
+.halfBanner .row {
+    justify-content: space-between;
+}
+.halfBanner a {
+    width: 560px;
+    padding: 21px 0;
+    text-align: center;
+    display: inline-block;
+    background: #F5F5F5;
+}
+a.workers span.en {
+    font-size: 11px;
+    color: #fff;
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 8.5px;
+    background: #ff7777;
+    text-transform: uppercase;
+}
+span.bn-title {
+    font-size: 14px;
+    font-weight: 700;
+}
+span.bn-notice {
+    font-size: 12px;
+}
+
+
+/* 푸터 */
+footer {
+    padding: 50px 0 54px;
+    margin-top: 200px;
+    background: #F7F9FA;
+    color: #2F3438;
+}
+footer a {
+    color: #2F3438;
+}
+.cs {
+    width: 288px;
+}
+.cs h1 {
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+.cs h1::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    transform: rotate(45deg);
+    position: relative;
+    top: -2px;
+    left: 2px;
+}
+.cs .en {
+    margin-bottom: 64px;
+}
+a.csBtn {
+    width: fit-content;
+    font-size: 14px;
+    display: block;
+    padding: 6px 10px;
+    border: 1px solid #DADDE0;
+}
+a.csMail {
+    margin-top: 12px;
+}
+.anchor {
+    width: 323px;
+    font-size: 11px;
+    border-left: 1px solid #DADDE0;
+    border-right: 1px solid #DADDE0;
+    justify-content: space-between;
+    margin-right: 30px;
+    padding: 0 30px;
+}
+.anchor ul:first-child {
+    margin-right: 45px;
+}
+.anchor li {
+    margin-bottom: 20px;
+}
+.infomation {
+    font-size: 10px;
+    color: #828C94;
+}
+.infomation a {
+    color: #828C94;
+}
+.infomation ul {
+    margin: 13px 0;
+}
+.corpIntro {
+    font-size: 12px;
+}
+.corpIntro li:not(:last-child)::after {
+    content: '';
+    width: 1px;
+    height: 10px;
+    display: inline-block;
+    margin: 0 3px;
+    background: #828C94;
+}
+.certificate img {
+    width: 32px;
+}
+.certificate li:first-child {
+    width: 146px;
+    justify-content: space-between;
+    margin-right: 30px;
+}
+.certificate li:last-child {
+    width: 324px;
+    justify-content: space-between;
+}
+ul.sns a {
+    margin-right: 16px;
+}

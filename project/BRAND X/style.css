@@ -1,0 +1,750 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #222;
+}
+:root {
+    --point: #ff581e;
+}
+h4 {
+    color: var(--point);
+}
+.en,
+nav, 
+.contact,
+h1, h2, h4 {
+    font-family: 'Montserrat', sans-serif;
+}
+.row {
+    display: flex;
+}
+/* --------------------------------------- */
+#wrap {
+    background: #fff;
+}
+/* header */
+header {
+    width: 154px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background: #FFF;
+    box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: width 300ms, height 300ms, background-color 300ms;
+}
+header.open {
+    width: 544px;
+}
+main {
+    width: calc(100% - 154px);
+    margin-left: 154px;
+}
+header .navigation {
+    width: 154px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+header .logo {
+    width: 76px;
+    height: 84px;
+    display: block;
+    background: url('images/ui/logo.png') no-repeat center;
+    text-indent: -9999px;
+}
+.burger {
+    cursor: pointer;
+}
+.burger span {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background: #3c3c3c;
+    margin-bottom: 5px;
+}
+.textlogo {
+    width: 13px;
+    height: 144px;
+    background: url('images/ui/down.png') no-repeat left top / 13px;
+}
+header .link-container {
+    width: 100%;
+    padding-left: 164px;
+    padding-top: 38px;
+    position: relative;
+}
+.links {
+    width: 390px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+h3 a {
+    color: #222;
+    font-size: 20px;
+}
+.links ul a {
+    color: #979797;
+    font-size: 15px;
+}
+.lang a.kr {
+    color: #4C4C4C;
+}
+.lang a:not(.kr) {
+    color: #A8A8A7;
+    padding-left: 20px;
+}
+.links li {
+    margin-right: 45px;
+}
+.links h3:not(:first-child) {
+    margin: 34px 0 8px;
+}
+.brandx-brand li {
+    width: 50%;
+    margin: 0;
+}
+.brandx-brand {
+    flex-wrap: wrap;
+}
+/* 버거에서 x로 */
+.burger span {
+    position: relative;
+    left: 0;
+    opacity: 1;
+    transition: all 300ms;
+}
+.burger.x span:first-child {
+    transform: rotate(45deg);
+    transform-origin: left top;
+}
+.burger.x span:nth-child(2) {
+    left: -30px;
+    opacity: 0;
+}
+.burger.x span:last-child {
+    transform: rotate(-45deg);
+    transform-origin: left bottom;
+}
+
+/* ///////////// 메인비쥬얼 */
+section.main-visual {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.main-visual .swiper-slide {
+    width: 100%;
+    height: 100vh;
+}
+section.main-visual div.tab-pager {
+    position: absolute;
+    left: 14%;
+    top: 50%;
+    margin-top: 145px;
+    z-index: 3;
+}
+.visual-tab {
+    font-size: 15px;
+    color: #9d9d9d;
+    font-weight: 700;
+    margin-right: 26px;
+    cursor: pointer;
+}
+.visual-tab-active {
+    color: #fff;
+}
+.visual-tab-active::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 1px;
+    background: #fff;
+    margin-top: 4px;
+}
+p.slogan {
+    position: absolute;
+    z-index: 3;
+    font-size: 47px;
+    color: #fff;
+    line-height: 150%;
+    font-weight: 200;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 14%;
+}
+.main-visual .mask {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0.50) 50%, rgba(0, 0, 0, 0.00) 100%);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    opacity: .3;
+}
+/* 메인비쥬얼 슬라이드 이미지 */
+.visual1 {
+    background: url('images/visual/visual1bg.jpg') no-repeat center / cover;
+}
+.visual1 video {
+    width: 100%;
+}
+.visual2 {
+    background: url('images/visual/imagination.jpg') no-repeat center / cover;
+}
+.visual3 {
+    background: url('images/visual/passion.jpg') no-repeat center / cover;
+}
+.visual4 {
+    background: url('images/visual/daily.jpg') no-repeat center / cover;
+}
+
+
+/* ////////////// FIXED MENU */
+.fixed-menu a.contact,
+.fixed-menu .mode {
+    position: fixed;
+    z-index: 99;
+}
+nav {
+    position: absolute;
+    z-index: 99;
+    top: 41px;
+    right: 176px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+nav a {
+    color: #fff;
+    padding: 0 25px;
+}
+a.contact {
+    font-size: 35px;
+    font-weight: 700;
+    color: #222;
+    right: -150px;
+    top: 50px;
+    transform-origin: left top;
+    transform: rotate(90deg);
+}
+
+/* //////////////////// 인트로 */
+section.intro {
+    width: 62.500vw;
+    height: 2064px;
+    margin: 320px auto 350px;
+    position: relative;
+}
+.image-container {
+    width: 35.781vw;
+    height: 2064px;
+    position: absolute;
+    /* border: 5px solid red; */
+    top: 0;
+}
+.image-container img {
+    position: absolute;
+}
+.img01 {
+    width: 82.92%;
+    left: 0;
+    top: 0;
+}
+.img02 {
+    width: 49.34%;
+    top: 446px;
+    right: 14.74%;
+}
+.img03 {
+    width: 68.18%;
+    top: 1022px;
+    left: 0;
+}
+.img04 {
+    width: 57.37%;
+    top: 1281px;
+    left: 28.18%;
+}
+.img05 {
+    width: 85.40%;
+    top: 1673px;
+    left: 0;
+}
+.sticky {
+    /* 부모의 height 구간을 지날때만 fixed*/
+    position: sticky;
+    top: 0;
+    width: 26.719vw;
+    margin-left: 35.781vw;
+}
+.sticky h4 {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.sticky h2 {
+    font-size: 41px;
+    margin-bottom: 44px;
+}
+.sticky p {
+    font-size: 17px;
+    line-height: 170%;
+    font-weight: 300;
+    margin-bottom: 70px;
+}
+.circle {
+    width: 23.802vw;
+    height: 182px;
+    position: relative;
+    margin-bottom: 82px;
+}
+.circle div {
+    width: 38.3%;
+    aspect-ratio: 1/1;
+    position: absolute;
+}
+.c1 {
+    background: url('images/intro/o1.png') no-repeat center / cover;
+    left: 0;
+}
+.c2 {
+    background: url('images/intro/o2.png') no-repeat center / cover;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.c3 {
+    background: url('images/intro/o3.png') no-repeat center / cover;
+    right: 0;
+}
+a.explore {
+    width: 233px;
+    height: 42px;
+    display: block;
+    color: var(--point);
+    font-size: 17px;
+    background: url('images/intro/Link.svg') no-repeat left bottom;
+}
+
+
+/* /////////////// 인포메이션 */
+.none {
+    display: none;
+}
+section.information {
+    width: 100%;
+    margin-bottom: 300px;
+}
+.information ul {
+    width: 77%;
+    max-width: 1300px;
+    min-width: 1000px;
+    margin-left: 22%;
+    padding-right: 2.2%;
+}
+.information ul li {
+    width: calc(100% / 3);
+    padding: 0 3%;
+}
+.information h4 {
+    transform: rotate(90deg) translate(24px, 9px);
+    transform-origin: left top;
+    font-size: 14px;
+    font-weight: 600;
+}
+.information div {
+    width: 100%;
+    aspect-ratio: 383/506;
+}
+.th1 {
+    background: url('images/infomation/01.jpg') no-repeat center / cover;
+}
+.th2 {
+    background: url('images/infomation/02.jpg') no-repeat center / cover;
+}
+.th3 {
+    background: url('images/infomation/03.jpg') no-repeat center / cover;
+}
+.information strong {
+    font-size: 23px;
+    margin: 35px 0 63px;
+    display: block;
+}
+.information p {
+    font-size: 15px;
+    height: 150px;
+}
+a.more {
+    display: inline-block;
+    font-size: 12px;
+    padding: 16px 24px;
+    color: #222;
+    border: 1px solid #222;
+    border-radius: 25px;
+    text-align: center;
+    background: #fff;
+    transition: all 300ms;
+}
+a.more:hover {
+    color: #fff;
+    border: 1px solid transparent;
+    background: #222;
+}
+/* ////////////// 브랜드 */
+section.brand-container {
+    width: 100%;
+    flex-wrap: wrap;
+    padding-bottom: 130px;
+    position: relative;
+    margin-bottom: 300px;
+}
+.brand {
+    width: 50%;
+    height: 294px;
+    position: relative;
+    cursor: pointer;
+}
+/* 브랜드 배경이미지 */
+.xexy {
+    background: url('images/brand/xexy.jpg') no-repeat center / cover;
+}
+.whia {
+    background: url('images/brand/whia.jpg') no-repeat center / cover;
+}
+.pocket {
+    background: url('images/brand/pocket.jpg') no-repeat center / cover;
+}
+.kookmin {
+    background: url('images/brand/3care.jpg') no-repeat center / cover;
+}
+.pt {
+    background: url('images/brand/pt.jpg') no-repeat center / cover;
+}
+/* PC일때는 안보이는 브랜드 */
+.gelato-factory {
+    display: none;
+    background: url('https://brandxcorp.com/web/upload/images/m_brandlist_08.jpg') no-repeat center / cover;
+}
+.mix2mix {
+    display: none;
+    background: url('https://brandxcorp.com/web/upload/images/m_brandlist_03.jpg') no-repeat center / cover;
+}
+.dr {
+    display: none;
+    background: url('https://brandxcorp.com/web/upload/images/m_brandlist_04.jpg') no-repeat center / cover;
+}
+
+
+.brand > * {
+    position: absolute;
+}
+.brand span {
+    top: 30px;
+    right: 30px;
+    font-size: 12px;
+    color: #151515;
+}
+.brand span::before {
+    content: '';
+    width: 30px;
+    height: 2px;
+    display: inline-block;
+    background: #000;
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    z-index: 3;
+    transition: left 500ms;
+}
+.brand > img {
+    left: 30px;
+    bottom: 50px;
+}
+/* mask*/
+.brand .mask {
+    width: 100%;
+    height: 294px;
+    background: rgba(0,0,0, .6);
+    color: #fff;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 500ms;
+}
+.brand a {
+    color: #fff;
+}
+.brand .mask > * {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    transition: bottom 500ms;
+}
+
+.brand-container a.more {
+    position: absolute;
+    padding: 16px 103px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* //////////////// 오피스 */
+section.office {
+    width: 86%;
+    margin-left: 14%;
+}
+section.office h4 {
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+.office-slider {
+    overflow: hidden;
+}
+.officepage {
+    width: 75%;
+}
+.officepage img {
+    width: 100%;
+    display: block;
+}
+/* pager */
+.office-pager {
+    width: 75%;
+    height: 1px;
+    position: relative;
+    margin-top: 35px;
+}
+div.office-pager div.progress {
+    height: 1px;
+    background: #ddd;
+}
+.swiper-pagination-progressbar span.swiper-pagination-progressbar-fill {
+    background: #222;
+}
+/* /////////// 다크모드전환 */
+.mode {
+    right: 50px;
+    bottom: 50px;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+.mode .icon {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: url('images/ui/icon/ico_moon.png');
+}
+.state span {
+    display: block;
+}
+.state {
+    text-align: right;
+    position: relative;
+    top: 0;
+    height: 26px;
+    margin-right: 7px;
+    transition: top 500ms;
+}
+.mode.dark .state {
+    top: -25px;
+}
+.mode.dark .icon {
+    background: url('images/ui/icon/ico_sun.png');
+}
+.mode.dark {
+    color: #fff;
+}
+/* 배경색 */
+#wrap.darkmode {
+    background: #222;
+    color: #fff;
+}
+#wrap.darkmode header {
+    background: #222;
+    color: #fff;
+}
+#wrap.darkmode a {
+    color: #fff;
+}
+#wrap.darkmode header .logo {
+    background-image: url('images/ui/logo_wh.png');
+}
+#wrap.darkmode .textlogo {
+    background-image: url('images/ui/down_wh.png');
+}
+#wrap.darkmode .burger span {
+    background: #fff;
+}
+#wrap.darkmode .circle div {
+    filter: invert(1);
+}
+#wrap.darkmode a.explore {
+    color: var(--point);
+}
+#wrap.darkmode a.more {
+    border-color: #fff;
+    background: #222;
+}
+#wrap.darkmode a.more:hover {
+    background: #fff;
+    color: #222;
+}
+/* //////////////// 푸터 */
+footer {
+    background: #fafafa;
+    padding-top: 130px;
+    padding-bottom: 185px;
+    font-size: 13px;
+    margin-top: 114px;
+}
+footer > .row {
+    /* width: 1018px; */
+    width: 53.021vw;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.footer-intro {
+    width: 380px;
+    margin-right: 30px;
+    line-height: 200%;
+}
+.footer-intro + ul {
+    line-height: 200%;
+}
+.footer-intro p {
+    margin-bottom: 14px;
+}
+footer a {
+    color: #222;
+}
+/* 패럴렉스 UI */
+.parallax {
+    height: 700px;
+    background: url('images/footer/img.jpg') no-repeat center / cover;
+    background-attachment: fixed; /* 배경고정기능 */
+    text-align: center;
+    color: #fff;
+    font-size: 19px;
+}
+.title {
+    font-size: 41px;
+}
+.change {
+    line-height: 170%;
+    margin-top: 30px;
+}
+/* 모바일버전의 헤더 스타일*/
+header.mo {
+    width: 100%;
+    height: 88px;
+    /* border: 1px solid #000; */
+    z-index: 100;
+    background: transparent;
+    box-shadow: none;
+}
+header.mo.open {
+    height: 100vh;
+    background: #fff;
+}
+header.mo .navigation {
+    width: 100%;
+    height: 88px;
+    flex-direction: row;
+    padding: 20px 15px 0;
+    align-items: flex-start;
+}
+header.mo .textlogo{
+    display: none;
+}
+header.mo a.logo {
+    width: 60px;
+    height: 66px;
+    background: url('https://brandxcorp.com/web/upload/images/logo_bl.png') no-repeat center / contain;
+}
+header.mo.open a.logo {
+    filter: invert(1);
+    transition: filter 300ms;
+}
+header.mo .lang {
+    position: absolute;
+    right: 50px;
+    bottom: 40px;
+}
+header.mo .link-container {
+    width: 100%;
+    height: 100vh;
+    padding: 0 0 0 30px;
+}
+/* 스크롤 내렸을때 (.drop이 있을 때)
+헤더랑 네비게이션의 높이 60px, 색이 화이트로,
+로고 120x31, https://brandxcorp.com/web/upload/images/img_logo02.png로 변경
+*/
+header.mo.drop {
+    height: 60px;
+    background: #fff;
+}
+header.mo.drop.open {
+    height: 100vh;
+}
+header.mo.drop .navigation {
+    height: 60px;
+    align-items: center;
+    padding: 0 15px;
+}
+header.mo.drop a.logo {
+    width: 120px;
+    height: 31px;
+    background: url('https://brandxcorp.com/web/upload/images/img_logo02.png') no-repeat center / contain;
+    filter: invert(1);
+}
+/* 브랜드에 있는 버튼 */
+.more-btn-container {
+    width: 100%;
+    height: 52px;
+    position: relative;
+    margin-top: 80px;
+}
+
+/* 패럴렉스 수정 */
+.parallax {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+footer {
+    margin-bottom: 700px;
+}
+.fighting {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 200px;
+    z-index: 1;
+}
+.dim {
+    width: 100%;
+    height: 700px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0, .5);
+}

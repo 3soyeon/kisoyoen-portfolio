@@ -1,0 +1,533 @@
+/* header */
+header {
+    width: 100%;
+    background: #fff;
+
+}
+.lineBn {
+    height: 50px;
+    background: #D3233A;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+}
+.lineBn .inner {
+    position: relative;
+}
+.closeBtn {
+    position: absolute;
+    right: 0;
+    top: 16px;
+}
+.subMenu h1 a {
+    width: 171px;
+    height: 32px;
+    display: block;
+    margin: 40px auto 28px;
+    background: url('images/logo.svg') no-repeat center / contain;
+    text-indent: -9999px;
+}
+.subMenu.inner {
+    position: relative;
+}
+.subMenu ul {
+    position: absolute;
+    right: 0;
+    bottom: 32px;
+    font-size: 14px;
+}
+.subMenu a {
+    color: #1D1D1B;
+}
+.subMenu ul li:not(:last-child)::after {
+    content: '';
+    width: 1px;
+    height: 12px;
+    background: #e4e4e4;
+    display: inline-block;
+    margin: 0 12px;
+}
+nav {
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    top: 152px;
+    left: 0;
+    z-index: 100;
+}
+nav.toTop {
+    top: 0;
+}
+.main-cate li {
+    width: 260px;
+    padding: 10px 30px;
+}
+.all {
+    height: 75px;
+    line-height: 75px;
+    position: relative;
+    padding-right: 12px;
+}
+ul.main-cate {
+    position: absolute;
+    top: 75px;
+    left: 0;
+    background: #fff;
+    display: none;
+    line-height: 35px;
+}
+/* all에 마우스가 올라가면 ul.main-cate가 보인다. */
+.all:hover ul.main-cate {
+    display: block;
+}
+
+ul.ramen {
+    border: 1px solid orange;
+    position: absolute;
+    top: 0;
+    left: 260px;
+    background: #fff;
+    display: none;
+    line-height: 35px;
+}
+/* catelist1에 마우스올리면 ul이 보인다. */
+.catelist1:hover ul.ramen {
+    display: block;
+}
+nav > .inner.row {
+    height: 75px;
+    align-items: center;
+    justify-content: space-between;
+}
+ul.gnb > li:not(:last-child) {
+    margin-right: 85px;
+}
+ul.gnb.row {
+    align-items: center;
+}
+/* 검색창 */
+.search {
+    width: 353px;
+    height: 45px;
+    border: 1px solid #ddd;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px 0 30px;
+    justify-content: space-between;
+}
+.search input[type="text"] {
+    width: 270px;
+    height: 26px;
+    font-family: inherit;
+    border: none;
+}
+.search input[type="text"]::placeholder {
+    color:#ccc;
+}
+.search input[type="text"]:focus {
+    outline: none;
+}
+.util {
+    align-items: center;
+}
+.goMyPage {
+    margin: 0 0 -4px 30px;
+}
+.all > img {
+    margin: 0 6px -4px 0;
+}
+.gnb a {
+    color: #1d1d1b;
+    font-size: 18px;
+    font-weight: 500;
+}
+/* nav의 li중에서 클래스명 all만 빼고, 자손 a에 마우스 올리면*/
+.main-cate li:hover {
+    color: #D3233A;
+}
+.ramen li:hover {
+    color: #D3233A;
+}
+
+/* 퀵메뉴 */
+.quick {
+    position: fixed;
+    right: 35px;
+    bottom: 30px;
+    text-align: center;
+    font-size: 13px;
+    color: #1d1d1b;
+    z-index: 100;
+}
+.quick-link,
+.quick-top {
+    border: 1px solid #E4E4E4;
+    border-radius: 5px;
+    background: #fff;
+}
+.quick li {
+    padding: 10px 15px;
+}
+.quick li:not(:last-child) {
+    border-bottom: 1px solid #E4E4E4;
+}
+.quick-top {
+    margin-top: 9px;
+    font-weight: 700;
+}
+ul.quick-top > li.topBtn {
+    height: 0;
+    padding: 0;
+    opacity: 0;
+    transition: padding 500ms, opacity 300ms;
+}
+ul.quick-top > li.topBtn.on {
+    opacity: 1;
+    padding: 20px 0 40px;
+}
+/* main -------------- */
+main {
+    margin-top: 75px;
+}
+/* main visual */
+.mainVisual div.swiper-slide {
+    width: 100%;
+    height: 610px;
+}
+.swiper-slide.visual1 {
+    background: url('images/visual/01.png') no-repeat center / cover;
+}
+.swiper-slide.visual2 {
+    background: url('images/visual/02.jpg') no-repeat center / cover;
+}
+.swiper-slide.visual3 {
+    background: url('images/visual/03.jpg') no-repeat center / cover;
+}
+.swiper-slide.visual4 {
+    background: url('images/visual/04.jpg') no-repeat center / cover;
+}
+.swiper-slide.visual5 {
+    background: url('images/visual/05.jpg') no-repeat center / cover;
+}
+.swiper-slide.visual6 {
+    background: url('images/visual/06.jpg') no-repeat center / cover;
+}
+.swiper-slide.visual7 {
+    background: url('images/visual/07.jpg') no-repeat center / cover;
+}
+.swiper-slide.visual8 {
+    background: url('images/visual/08.jpg') no-repeat center / cover;
+}
+.swiper-slide.visual9 {
+    background: url('images/visual/09.jpg') no-repeat center / cover;
+}
+.swiper-slide.visual10 {
+    background: url('images/visual/10.jpg') no-repeat center / cover;
+}
+.swiper-slide.visual11 {
+    background: url('images/visual/11.jpg') no-repeat center / cover;
+}
+.swiper-slide.visual12 {
+    background: url('images/visual/12.jpg') no-repeat center / cover;
+}
+.swiper-slide.visual13 {
+    background: url('images/visual/13.jpg') no-repeat center / cover;
+}
+.swiper-slide.visual14 {
+    background: url('images/visual/14.jpg') no-repeat center / cover;
+}
+.swiper-slide.visual15 {
+    background: url('images/visual/15.jpg') no-repeat center / cover;
+}
+.swiper-slide.visual16 {
+    background: url('images/visual/16.jpg') no-repeat center / cover;
+}
+
+.swiper-pagination.fraction-pager {
+    width: 77px;
+    height: 35px;
+    border-radius: 28px;
+    background: rgba(0,0,0, .3);
+    color: rgba(255,255,255, .5);
+    font-size: 13px;
+    line-height: 35px;
+    letter-spacing: 0px;
+    left: 1333px;
+    bottom: 30px;
+}
+section.swiper .inner {
+    position: relative;
+}
+.swiper-pagination-current {
+    font-weight: 700;
+    color: #fff;
+}
+.stopBtn {
+    width: 35px;
+    height: 35px;
+    border-radius: 17.5px;
+    background: rgba(0,0,0, .3) url('images/icons/pause.svg') no-repeat center;
+    position: absolute;
+    left: 1290px;
+    bottom: 30px;
+    z-index: 1;
+}
+
+/* cate */
+.cate {
+    width: 1260px;
+    margin: 130px auto 90px;
+    font-size: 15px;
+}
+.cate a {
+    color: #333;
+}
+.cate ul {
+    width: 100%;
+    justify-content: space-between;
+}
+.cate li {
+    width: 90px;
+    flex-direction: column;
+    align-items: center;
+}
+.cate li img {
+    width: 100%;
+    margin-bottom: 11px;
+}
+.cate span {
+    font-weight: 300;
+    transition: font-weight 500ms;
+}
+.cate a:hover span {
+    font-weight: 700;
+}
+/* new-item 새로움을 맛보세요 */
+section.new.inner {
+    position: relative;
+}
+.new-item {
+    overflow: hidden;
+}
+.new-prev,
+.new-next {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+}
+.new-prev {
+    left: -24px;
+}
+.new-next {
+    right: -24px;
+}
+/* benefit 가로배너 */
+section.benefit {
+    margin: 100px auto;
+}
+.benefit-slider {
+    overflow: hidden;
+    position: relative;
+}
+.benefit .swiper-slide {
+    height: 130px;
+    border-radius: 10px;
+}
+.benefit1 {
+    background: url('images/linebanner/1679640619748dDf1H.png') no-repeat center / cover;
+}
+.benefit2 {
+    background: url('images/linebanner/16796428011905ap92.png') no-repeat center / cover;
+}
+.benefit3 {
+    background: url('images/linebanner/ButT7NtnqoPmhF5lcKpCAA6z9xKsuIFBrrdeOR.vbngius79dtk.png') no-repeat center / cover;
+}
+.bn-prev, .bn-next {
+    width: 60px;
+    height: 130px;
+    display: block;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+}
+.bn-prev {
+    background: url('images/icons/R_arrow_banner.svg') no-repeat center;
+    left: 0;
+} 
+.bn-next {
+    background: url('images/icons/L_arrow_banner.svg') no-repeat center;
+    right: 0;
+}
+/* deal 오늘이 지나면 생각날 딜! */
+section.deal {
+    height: 590px;
+    padding-top: 100px;
+    background: url('https://ottogi-mall-s3.s3.ap-northeast-2.amazonaws.com/data/banner/DWp35hXI0D3oyUzYhBL6295RYJRw4MYNughGNQ8ACp.ure13yp92b00.jpg') no-repeat center / cover;
+}
+section.deal .inner {
+    overflow: hidden;
+}
+.deal-info .price {
+    transform: scale(1.2);
+    transform-origin: left top;
+}
+.deal-th {
+    width: 250px;
+    height: 250px;
+}
+.deal-th img {
+    width: 100%;
+}
+.timedeal .swiper-slide {
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    align-items: center;
+}
+.deal-info p {
+    font-size: 20px;
+    font-weight: 700;
+}
+.deal-info::after {
+    content: url('images/icons/icon_cart.svg');
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+}
+.timedeal .swiper-slide::after {
+    content: url('https://www.ottogimall.co.kr/static/imgs/front/cw/images/main/bg_timedeal.png');
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+/* currentTime 현재 시간 (딜 남은시간) */
+section.deal > .inner > .row {
+    justify-content: space-between;
+    align-items: flex-end; /* 아래쪽으로 정렬 */
+    margin: 8px 0 30px;
+}
+p.currentTime {
+    font-family: 'Pretendard-Bold';
+    font-size: 50px;
+    font-weight: 700;
+    color: #d53232;
+}
+span.hours::after,
+span.minutes::after {
+    content: ':';
+}
+.deal-prev, 
+.deal-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+.timedeal {
+    position: relative;
+}
+.deal-prev {
+    left: -10px;
+}
+.deal-next {
+    right: 0;
+}
+/* MD가 엄선한 갓상품 md-pick */
+section.md-pick {
+    margin: 100px 0;
+    overflow: hidden;
+}
+.md-pick .swiper-slide > .row {
+    width: 1600px;
+    height: 600px;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 100px 0;
+    position: relative;
+}
+.md-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 100px
+}
+.md-item {
+    position: absolute;
+    right: 0;
+    bottom: 100px;
+}
+.md-item img {
+    width: 100px;
+}
+.md-item p {
+    color: #1d1d1b;
+    margin-bottom: 7px;
+}
+.md-item span {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1d1d1b;
+}
+.md-item li {
+    width: 292px;
+    height: 100px;
+    border-radius: 8px;
+    padding: 10px 90px 10px 10px;
+    box-sizing: content-box;
+    align-items: center;
+    position: relative;
+    background: #fff;
+}
+.md-item li div {
+    padding-left: 10px;
+}
+.md-item li::after {
+    content: url('images/icons/icon_cart.svg');
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+}
+.md-text p.title {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+.md-item ul:first-child {
+    margin-right: 10px;
+}
+.md1 {
+    background: url('https://ottogi-mall-s3.s3.ap-northeast-2.amazonaws.com/data/banner/1684116093682GIhmo.png') no-repeat center / cover;
+}
+.md2 {
+    background: url('https://ottogi-mall-s3.s3.ap-northeast-2.amazonaws.com/data/banner/HWBIKeowSlLZ8WsNIJwCfTetF3vrOABVe7GcpemOWhe4Jwgjtp.qe11j5nn5jjs.png') no-repeat center / cover;
+}
+.md3 {
+    background: url('https://ottogi-mall-s3.s3.ap-northeast-2.amazonaws.com/data/banner/3jga06AV94MBgKcrnjMV9V7Nj6BV0NTXDLd4UpAcsd4Rm.u8b7q2vwm5gw.png') no-repeat center / cover;
+}
+.md4 {
+    background: url('https://ottogi-mall-s3.s3.ap-northeast-2.amazonaws.com/data/banner/3jga06AV94MBgKcrnjMV9V7Nj6BV0NTXDLd4UpAcsd4Ro.1jy5ghs94ns55.png') no-repeat center / cover;
+}
+.md5 {
+    background: url('https://ottogi-mall-s3.s3.ap-northeast-2.amazonaws.com/data/banner/HWBIKeowSlLZ8WsNIJwCfTetF3vrOABVe7GcpemOWhe4chLiXp.trqt3z7wta9i.png') no-repeat center / cover;
+}
+/* MD pick 탭 스타일 */
+.md-tab-container div.inner {
+    width: 1410px;
+}
+.md-tab-container {
+    margin: 40px auto 25px;
+}
+.md-tab {
+    margin-right: 35px;
+    font-size: 20px;
+    color: #1d1d1b;
+    padding-bottom: 3px;
+    cursor: pointer;
+}
+.md-tab-active {
+    font-weight: 700;
+    color: #000;
+    border-bottom: 2px solid #000;
+}

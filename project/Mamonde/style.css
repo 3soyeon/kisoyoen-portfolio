@@ -1,0 +1,308 @@
+@font-face {
+    font-family: 'Arita-dotum-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-dotum-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Cera Pro";
+    font-style: normal;
+    font-weight: 100;
+    src: url("font/CeraProLight.woff");
+}
+@font-face {
+    font-family: "Cera Pro";
+    font-style: normal;
+    font-weight: 400;
+    src: url("font/CeraProRegular.woff");
+}
+@font-face {
+    font-family: "Cera Pro";
+    font-style: normal;
+    font-weight: bold;
+    src: url("font/CeraProMedium.woff");
+}
+body {
+    font-family: 'Arita-dotum-Medium';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+.row {
+    display: flex;
+}
+.inner {
+    width: 1274px;
+    margin: 0 auto;
+    /* border: 1px solid pink; */
+}
+/* ----------------------헤더--------------------- */
+header {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: transparent;
+    z-index: 99;
+}
+header a {
+    color: #fff;
+}
+header .row {
+    height: 59px;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1 a {
+    width: 132px;
+    height: 59px;
+    display: block;
+    background: url('images/logo_wh.svg') no-repeat center / contain;
+    text-indent: -9999px;
+}
+nav li {
+    font-size: 18px;
+    /* border: 1px solid red; */
+}
+nav li a {
+    display: block;
+    padding: 0 20px;
+    border-bottom: 3px solid transparent;
+    margin: 0 50px;
+    height: 59px;
+    line-height: 59px;
+}
+nav li a:hover {
+    border-bottom: 3px solid #fccc00;
+}
+.usermenu a {
+    margin-left: 35px;
+}
+
+/*----------------------메인비쥬얼--------------------*/
+.mainSlide .swiper-slide {
+    width: 100%;
+    height: 100vh;
+}
+.mainSlidePage1 {
+    background: url('images/slide/1.jpg') no-repeat center / cover;
+}
+.mainSlidePage2 {
+    background: url('images/slide/2.jpg') no-repeat center / cover;
+}
+.mainSlidePage3 {
+    background: url('images/slide/3.jpg') no-repeat center / cover;
+}
+.mainSlidePage4 {
+    background: url('images/slide/4.jpg') no-repeat center / cover;
+}
+.mainSlidePage5 {
+    background: url('images/slide/5.jpg') no-repeat center / cover;
+}
+.content {
+    position: absolute;
+    left: 12.5vw;
+    bottom: 270px;
+}
+.content h1 {
+    color: #fff;
+    font-size: 45px;
+    line-height: 120%;
+    margin-bottom: 20px;
+    text-shadow: 0 0 5px rgba(0,0,0, .3);
+}
+.content p {
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0,0,0, .3);
+    font-size: 24px;
+}
+.content .readMore {
+    width: 140px;
+    height: 48px;
+    display: block;
+    border: 1px solid #fff;
+    color: #fff;
+    text-align: center;
+    line-height: 48px;
+    text-shadow: 0 0 5px rgba(0,0,0, .3);
+    box-shadow: 0 0 5px rgba(0,0,0, .3);
+    margin-top: 55px;
+}
+.mainSlideNavigation {
+    width: 100%;
+    height: 47px;
+    position: absolute;
+    z-index: 99;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.mainSlidePrev {
+    position: absolute;
+    left: 40px;
+}
+.mainSlideNext {
+    position: absolute;
+    right: 40px;
+}
+/* ----------------------------------
+
+pager 관련 class들 (swiper-bundle.min.css)
+부모 .swiper-pagination (213)
+여백 .swiper-horizontal>.swiper-pagination-bullets,.swiper-pagination-bullets.swiper-pagination-horizontal,.swiper-pagination-custom,.swiper-pagination-fraction (226)
+스타일 .swiper-pagination-bullet (257)
+액티브 .swiper-pagination-bullet-active (279)
+
+----------------------------------*/
+
+.mainSlidePagerBox {
+    width: 450px;
+    position: absolute;
+    z-index: 99;
+    left: 12.5vw;
+    bottom: 190px;
+}
+.mainSliderPager .swiper-pagination-bullet {
+    width: 20%;
+    height: 3px;
+    border-radius: 0;
+    background: #fff;
+}
+.mainSliderPager .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 !important;
+}
+
+/* 일시정지 재생 토글버튼 */
+.stopMainSlider {
+    width: 9px;
+    height: 12px;
+    background: url('images/icons/paused.png') no-repeat center / contain;
+    position: absolute;
+    top: 5px;
+    right: -27px;
+    cursor: pointer;
+}
+.stopMainSlider.tog {
+    background: url('images/icons/start.png') no-repeat center / contain;
+}
+
+/* --------------------솔루션 슬라이더-------------------- */
+/* .sec1 {
+    display: none;
+} */
+.sec2 {
+    /* display: none; */
+    width: 100%;
+    overflow-x: hidden;
+    margin: 140px 0 210px;
+    position: relative;
+}
+.solutionTitle {
+    font-family: "Cera Pro";
+    font-weight: bold;
+    top: 0;
+    margin-left: 12.81vw;
+}
+.solutionTitle h1 {
+    font-size: 37px;
+    margin-bottom: 23px;
+}
+.solutionTitle p {
+    width: fit-content;
+    background: #faff66;
+    border: 1px solid #a9a8a8;
+    font-size: 23px;
+    padding: 6px 20px;
+    border-radius: 25px;
+}
+/* 제품 슬라이더 */
+.swiper.solutionSlider  {
+    width: 71.05vw;
+    margin-left: 28.95vw;
+}
+/* 이미지 사이즈 조절 */
+div[class^=sol-bg] {
+    width: 100%;
+    /* height를 고정값(px)으로 주고싶지 않을 때*/
+    /* 사진인경우에는 사진가로/사진세로 사이즈 넣으면 된다 */
+    aspect-ratio: 407 / 562;
+    position: relative;
+}
+div[class^=sol-bg] img {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+div[class^=sol-bg] span {
+    font-family: "Cera Pro";
+    position: absolute;
+    display: block;
+    padding: 10px 20px;
+    background: rgba(255,255,255,.5);
+    border: 1px solid #a9a8a8;
+    font-size: 25px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+    opacity: 0;
+}
+img.sol-img {
+    z-index: 1;
+}
+.swiper-slide strong {
+    font-size: 21px;
+    font-weight: normal;
+    margin: 20px 0 10px;
+    display: inline-block;
+}
+.swiper-slide-active img:last-child {
+    z-index: 3;
+}
+.swiper-slide-active strong {
+    background: #fcffb2;
+    padding: 0 5px;
+}
+.swiper-slide-active div[class^=sol-bg] span {
+    opacity: 1;
+}
+
+
+/*  솔루션 이전/다음 버튼 */
+.solutionNavigation {
+    width: 71.05vw;
+    position: absolute;
+    left: 28.95vw;
+    z-index: 99;
+    top: 50%;
+}
+.solutionNext {
+    position: absolute;
+    right: 0;
+}
+/* 페이저 스타일 */
+section.sec2 .hashtag-pager {
+    width: fit-content;
+    position: absolute;
+    top: 260px;
+    left: 12.81vw;
+}
+.hash {
+    width: fit-content;
+    color: #bcbcbc;
+    line-height: 150%;
+    padding: 7px 25px;
+}
+.hash-active {
+    color: #000;
+    background: #faff66;
+    font-size: clamp(1.25rem, 0.7065rem + 0.8696vw, 1.75rem);
+    margin: 5px 0;
+    padding: 3px 5px;
+    transition: all 300ms;
+}
