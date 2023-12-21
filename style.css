@@ -1,0 +1,645 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.row {
+    display: flex;
+}
+.inner {
+    width: 1620px;
+    margin: 0 auto;
+}
+section {
+    height: 1080px;
+}
+:root {
+    --main: #FDB393;
+    --point: #FF8955;
+    --bold: #FF793F;
+    --hit: #FFDACA;
+}
+section.project3,
+section.project2,
+section.project1,
+section.Video {
+    border-bottom: 1px solid #FFDACA;
+}
+
+
+
+/* ========= header ========= */
+header {
+    width: 100%;
+    height: 80px;
+    padding: 0 60px;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 4px -4px  rgba(0,0,0, .5);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    background: #fff;
+    text-align: center;
+    align-items: centers;
+}
+header h1 a {
+    align-items: center;
+    font-size: 22px;
+    color: var(--bold);
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 18px;
+}
+header nav ul {
+    align-items: center;
+    width: 510px;
+    justify-content: space-between;
+    color: var(--main);
+    font-weight: 700;
+    height: 80px;
+}
+header nav a {
+    font-size: 18px;
+    padding: 26px 25px;
+    color: var(--main);
+}
+header nav a:hover {
+    color: var(--bold);
+    border-bottom: 3px solid var(--bold);
+}
+header h1 a:hover {
+    border-bottom: 3px solid var(--bold);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ========= main ========= */
+/* ----------------- section class="TITLE" ----------------- */
+section.TITLE {
+    width: 100%;
+    height: 100vh;
+    z-index: -99;
+    background: #FFF5E1;
+}
+section.TITLE p {
+    color: #FF8955;
+    font-size: 30px;
+    font-weight: 400;
+}
+section.TITLE .titleText {
+    text-align: center; /* 텍스트를 수평으로 가운데 정렬합니다. */
+    display: flex;
+    justify-content: center; /* 텍스트를 수직으로 가운데 정렬합니다. */
+    align-items: center;
+    height: 100vh; /* 화면 높이에 맞추려면 사용할 수 있습니다. */
+}
+
+.custom-font {
+    font-size: 100px;
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 700;
+}
+section.TITLE .titleText p {
+    font-size: 20px;
+}
+
+/* 애니메이션 */
+section.TITLE a.go-notion {
+    animation: changeColor 500ms linear infinite alternate;
+}
+@keyframes changeColor {
+    from { color: var(--hit); }
+    to { color: var(--bold) }
+}
+
+section.TITLE p span {
+    font-weight: 700;
+}
+section.TITLE ul {
+    position: absolute;
+    bottom: 112px;
+    right: 68px;
+}
+section.TITLE ul li {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--hit);
+    text-align : right;
+}
+section.TITLE ul li span {
+    font-weight: 700;
+    font-size: 16px;
+    margin-right: 10px;
+}
+section.TITLE ul li:hover {
+    color: var(--bold);
+}
+section.TITLE ul li a {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--hit);
+    text-align : right;
+}
+section.TITLE ul li a:hover {
+    color: var(--bold);
+}
+
+/* ----------------- section class="about" ----------------- */
+section.about {
+    background: #F9F9F9;
+}
+img.ProfilePicture  {
+    width: 440px;
+    height: 500px;
+    margin-top: 240px;
+    padding-right: 60px;
+    display: block;
+}
+
+.ProfileText {
+    margin: 140px 20px 80px 20px ;
+}
+
+.profileTitle {
+    font-size: 24px;    
+    font-weight: 700;
+    color: var(--bold);
+    padding-bottom: 20px ;
+    border-bottom: 2px solid var(--bold);
+    margin-bottom: 30px ;
+    width: 430px;
+}
+.profileBold {
+    width: 130px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.ProfileDetailText {
+    color: #161616;
+    font-size: 18px;
+    font-weight: 500;
+}
+.ProfileText li {
+    padding-bottom: 10px ;
+}
+.profile {
+    margin-right: 120px;
+}
+.educationTitle {
+    font-size: 20px;    
+    font-weight: 700;
+    color: var(--bold);
+    padding-bottom: 20px ;
+    border-bottom: 2px solid var(--bold);
+    margin-bottom: 30px ;
+    width: 980px;
+}
+
+
+/* ----------------- section class="project1" ----------------- */
+section.project1 {
+    height: 1000px;
+}
+section.project1 h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--bold) ;
+    padding-top: 100px;
+}
+.project1Detail {
+    margin: 0 auto;
+    padding: 60px 60px;
+}
+.project1Detail img {
+    margin-right: 110px;
+}
+.projectTitle {
+    font-size: 30px;
+    font-weight: 700;
+    padding-bottom: 30px;
+}
+.project1Detail ul li.projectBold {
+    font-weight: 400;
+    font-size: 20px;
+    padding-bottom: 35px;
+}
+.project1Detail ul {
+    padding: 20px 0;
+}
+.project1Detail ul li {
+    font-weight: 600;
+    font-size: 24px;
+    padding-bottom: 5px;
+}
+div.Btn {
+    margin-top: 70px;
+}
+section.project1 div.Btn {
+    justify-content: center;
+}
+div.Btn a {
+    padding: 13px 40px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--bold);
+    border: 1px solid var(--bold);
+    margin-right: 6px;
+    border-radius: 13px;
+} 
+div.Btn a:hover {
+    color: #fff;
+    background: var(--bold);
+}
+section.project1 div#dim img {
+    /* width: 1600px; */
+    margin: 0 auto;
+}
+.moaFigma {
+    padding: 13px 40px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--bold);
+    border: 1px solid var(--bold);
+    margin-right: 6px;
+    border-radius: 13px;
+} 
+.moaFigma:hover {
+    color: #fff;
+    background: var(--bold);
+}
+
+/* 프로토타입 레이어팝업 */
+.moa-prototype {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    display: block;
+}
+.moa-prototype.close {
+    display: none;
+}
+.proto {
+    width: 393px;
+    height: 852px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* border: 3px solid #000; */
+    box-sizing: content-box;
+    overflow: hidden;
+}
+
+
+/* ----------------- section class="project2" ----------------- */
+section.project2 {
+    height: 1000px;
+}
+/* project2Box1 */
+section.project2 h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--bold) ;
+    padding-top: 60px;
+}
+.project2Box1 {
+    margin-top: 60px;
+    margin-left: 120px;
+}
+.project2Box1 img {
+    width: 500px;
+    height: 300px;
+    margin-right: 100px;
+}
+.project2Box1Text {
+    margin-bottom: 30px;
+}
+.project2Box1Text h4 {
+    padding-right: 15px;
+    font-size: 24px;
+}
+.project2Box1Text p {
+    font-size: 20px;
+}
+.project2Box1Text .row {
+    padding-bottom: 15px;
+}
+.project2Box1Detail div.Btn a {
+    padding: 13px 40px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--bold);
+    border: 1px solid var(--bold);
+    margin-right: 6px;
+    border-radius: 13px;
+} 
+.project2Box1Detail div.Btn a:hover {
+    color: #fff;
+    background: var(--bold);
+}
+.project2Box1Detail div.Btn {
+    margin-top: 20px;
+}
+
+/* project2Box2 */
+.project2Box2 {
+    margin-top: 100px;
+    margin-left: 120px;
+}
+.project2Box2 img {
+    width: 500px;
+    height: 300px;
+    margin-right: 100px;
+}
+.project2Box2Text {
+    margin-bottom: 30px;
+}
+.project2Box2Text h4 {
+    padding-right: 15px;
+    font-size: 24px;
+}
+.project2Box2Text p {
+    font-size: 20px;
+}
+.project2Box2Text .row {
+    padding-bottom: 15px;
+    text-align: center;
+    align-items: center;
+}
+.project2Box2Detail div.Btn {
+    margin-top: 15px;
+}
+
+
+/* ----------------- section class="project3" ----------------- */
+section.project3 {
+    height: 1000px;
+}
+.project3 h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--bold) ;
+    padding-top: 60px;
+    margin-bottom: 60px;
+}
+.project3 ul {
+    width: 1620px;
+    height: 580px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.project3 ul li {
+    width: 500px;
+    height: 350px;
+    background: #d9d9d9;
+    margin-right: 20px;
+}
+.project3 ul li img {
+    width: 100%;
+    height: 100%;
+}
+.project3 ul li:hover img {
+    filter: brightness(0.7);
+    transition: 0.5s ease-out;
+    z-index: 1;
+}
+section.project3 li {
+    position: relative;
+}
+.project3 ul li:hover .up {
+    opacity:1
+}
+.up {
+    background: var(--bold);
+    width: 500px;
+    height: 80px;
+    position: absolute;
+    left: 0px;
+    top: 270px;
+    opacity:0;
+    line-height: 80px;
+    transition:0.5s all;
+    z-index: 99;
+}
+.up h3 {
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    width: 120px;
+}
+.up a {
+    display: inline-block;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    width: 120px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+.up a:hover {
+    background: #fff;
+    color: var(--bold);
+}
+section.project3 ul li:nth-child(-n+4) {
+    margin-bottom: 20px;
+}
+
+
+/* ----------------- section class="Video" ----------------- */
+section.Video h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--bold) ;
+    padding-top: 100px;
+}
+.VideoBox1 {
+    margin-top: 60px;
+    margin-left: 120px;
+}
+.VideoBox1 img {
+    width: 500px;
+    height: 300px;
+    margin-right: 100px;
+}
+.VideoBox1Text {
+    margin-bottom: 30px;
+}
+.VideoBox1Text h4 {
+    padding-right: 15px;
+    font-size: 24px;
+}
+.VideoBox1Text p {
+    font-size: 20px; 
+}
+.VideoBox1Text .row {
+    padding-bottom: 15px;
+}
+.VideoBox1Detail div.Btn a {
+    padding: 13px 40px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--bold);
+    border: 1px solid var(--bold);
+    margin-right: 6px;
+    border-radius: 13px;
+} 
+.VideoBox1Detail div.Btn a:hover {
+    color: #fff;
+    background: var(--bold);
+}
+.VideoBox1Detail div.Btn {
+    margin-top: 20px;
+}
+
+/* VideoBox2 */
+.VideoBox2 {
+    margin-top: 100px;
+    margin-left: 120px;
+}
+.VideoBox2 img {
+    width: 500px;
+    height: 300px;
+    margin-right: 100px;
+}
+.VideoBox2Text {
+    margin-bottom: 30px;
+}
+.VideoBox2Text h4 {
+    padding-right: 15px;
+    font-size: 24px;
+}
+.VideoBox2Text p {
+    font-size: 20px;
+}
+.VideoBox2Text .row {
+    padding-bottom: 15px;
+    text-align: center;
+    align-items: center;
+}
+.VideoBox2Detail div.Btn a {
+    padding: 13px 40px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--bold);
+    border: 1px solid var(--bold);
+    margin-right: 6px;
+    border-radius: 13px;
+} 
+.VideoBox2Detail div.Btn a:hover {
+    color: #fff;
+    background: var(--bold);
+}
+.VideoBox2Detail div.Btn {
+    margin-top: 20px;
+}
+
+
+
+
+
+
+/* ----------------- section class="content" ----------------- */
+section.content h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--bold) ;
+    padding-top: 120px;
+}
+section.content ul {
+    margin-top: 150px;
+}
+section.content ul li {
+    margin-right: 50px;
+    cursor: pointer;
+}
+section.content ul li:hover {
+    display: block;
+    filter: brightness(0.7);
+    transition: 0.5s ease-out;
+    z-index: 0;
+}
+
+section.content img {
+    width: 300px;
+    height: 400px;
+    box-shadow: 2px 4px 4px -4px  rgba(0,0,0, .5);    
+    border: 1px solid rgba(0,0,0, .1);
+}
+/* dim */
+#dim {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    background: rgba(0,0,0, .5);
+    display: none;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+}
+#dim.on {
+    display: block;
+}
+.layer {
+    width: 90vw;
+    height: 90vh;
+    background: #fff;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: scroll;
+}
+
+
+/* ========= footer ========= */
+footer {
+    text-align: center;
+    padding: 100px 0;
+    color: #fff;
+    background: var(--bold);
+}
+
+
+/* ========= cursor ========= */
+.cursor {
+    width: 30px;
+    height: 30px;
+    background: var(--main);
+    border-radius: 50%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    /* 요소가 다른색을갖고 있을때 색상을 혼합해줌 */
+    /* mix-blend-mode: difference; */
+    /* 모양이 커서의 가운데로 오게 */
+    transform: translate(-50%, -50%);
+    /* 느릿하게 따라오기 */
+    transition: 100ms;
+    /* 클릭 막기 */
+    pointer-events: none;
+}
